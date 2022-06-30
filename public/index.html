@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1> Mi App Chat</h1>
+    <div id="messages"></div>
+
+    <form onsubmit=" return addMessage(this)">
+        <input type="text" id="username" placeholder="Tu Nombre" >
+        <input type="text" id="texto" placeholder="Mensaje">
+        <input type="submit" value="Enviar" />
+        <button type="reset">Eliminar</button>
+    </form>
+    <br>
+    <br>
+    <h2> productos</h2>
+    <form action="/productos" method="post">
+        <div class="form__group">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="title" placeholder="Product name" required />
+        </div>
+        <div class="form__group">
+          <label for="cantidad"> Quantity</label>
+          <input id="price" type="number" name="price" placeholder="3000" required />
+        </div>
+        <div class="form__group">
+          <label for="image">Image</label>
+          <input id="image" type="text" name="thumbnail" placeholder="Image URL" required />
+        </div>
+        <div class="form__group">
+          <button type="submit">Add New Product</button>
+          <button type="reset">Eliminar</button>
+        </div>
+      </form>
+    <script src="main.js"></script>
+</body>
+</html>
